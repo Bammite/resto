@@ -7,25 +7,27 @@
       href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
       rel="stylesheet"
     />
+    <link rel="shortcut icon" type="x-icon" href="./assets/sunset.jpeg">
     <link rel="stylesheet" href="styles.css" />
-    <title>Faz Dynastie</title>
+    <title>SunSet Grill</title>
   </head>
   <body>
-    <header class="header">
+    <header class="header" id="acceuil">
+      <img src="./assets/slider03.jpg" alt="" class="bckg">
       <nav>
         <div class="nav__header">
           <div class="nav__logo">
             <a href="#" class="logo">
               <img
-                src="assets/logFaz.jpg"
+                src="assets/sunset.jpeg"
                 alt="logo Faz Dynastie"
                 class="nav__logo-dark"
               />
               <img
-                src="assets/logFaz.jpg"
+                src="assets/sunset.jpeg"
                 alt="logo"
                 class="nav__logo-white"
-              />
+              />SunSet Grill
             </a>
           </div>
           <div class="nav__menu__btn" id="menu-btn">
@@ -33,14 +35,14 @@
           </div>
         </div>
         <ul class="nav__links" id="nav-links">
-          <li><a href="#home">ACCEUIL</a></li>
+          <li>/<a href="#acceuil">ACCEUIL</a>/</li>
           <!-- <li><a href="#special">SPECIAL</a></li> -->
-          <li><a href="#menu">MENU</a></li>
-          <li><a href="#event">EVENEMENT</a></li>
-          <li><a href="#contact">CONTACT</a></li>
+          <li>/<a href="#menu">MENU</a>/</li>
+          <li>/<a href="#event">EVENEMENT</a>/</li>
+          <li>/<a href="#contact">CONTACT</a>/</li>
         </ul>
       </nav>
-      <div class="section__container header__container" id="home">
+      <!-- <div class="section__container header__container" id="home">
         <div class="header__image">
           <img src="assets/chefCusto.svg" alt="header" />
         </div>
@@ -48,31 +50,33 @@
           <h2>COMMANDEZ, SAVOUREZ, SANS BOUGER</h2>
           <h1><span>FAZ</span><br/>DYNASTIE</h1>
         </div>
-      </div>
+      </div> -->
     </header>
 
-    <!-- <section class="section__container banner__container" id="special">
+    <section class="section__container banner__container" id="special">
       <div class="banner__card">
-        <p>TRY IT OUT TODAY</p>
-        <h4>MOST POPULAR BURGER</h4>
+        <p>SPECIALITÉ DU JOUR</p>
+        <h4></h4>
       </div>
       <div class="banner__card">
-        <p>TRY IT OUT TODAY</p>
-        <h4>MORE FUN<br />MORE TASTE</h4>
+        <p>LE PLUS POPULAIRE</p>
+        <h4>BURGER <br />AU POULET</h4>
       </div>
       <div class="banner__card">
-        <p>TRY IT OUT TODAY</p>
-        <h4>FRESH & CHILI</h4>
+        <p>POUR UNE SOIREÉ</p>
+        <h4>ENTRE AMI</h4>
       </div>
-    </section> -->
+    </section>
 
     <section class="section__container order__container" id="menu">
-      <h3>TOUJOURS PLUS SAVOUREUX</h3>
-      <h2 class="section__header">CHOISIE & PROFITE</h2>
+      <div class="bordertop">
+        <img src="./assets/bordertop-768x112.png" alt="" >
+      </div>
+      <!-- <h2 class="section__header">CHOISIE & PROFITE</h2> -->
       <p class="section__description">
         Que vous ayez envie de saveurs classiques ou de combinaisons audacieuses, 
         c'est ici que votre voyage culinaire commence. Satisfaisez vos envies et 
-        savourez chaque bouchée en créant votre expérience de burger personnalisée avec Faz Dynastie.
+        savourez chaque bouchée en créant votre expérience de culinaire personnalisée avec SunSet Grill.
       </p>
       <div class="order__grid">
         <div class="order__card">
@@ -83,7 +87,9 @@
             parfumée et servi avec un choix de viande, de poisson frit ou 
             d’œuf. Une saveur authentique et réconfortante, comme à la maison.
           </p>
-          <button class="btn">COMMANDEZ</button>
+          <div class="commander">
+            <button class="btn">COMMANDEZ</button>
+          </div>
         </div>
         <div class="order__card">
           <img src="assets/attiekePoulet.jpg" alt="order" />
@@ -93,17 +99,21 @@
             Un plat généreux qui ravira 
             vos papilles et vous fera voyager dès la première bouchée.
           </p>
-          <button class="btn">COMMANDEZ</button>
+          <div class="commander">
+            <button class="btn">COMMANDEZ</button>
+          </div>
         </div>
         <div class="order__card">
-          <img src="assets/Koliko.jpg" alt="order" />
+          <img src="assets/pizza.png" alt="order" />
           <h4>koliko</h4>
           <p>
             Plongez dans l'authenticité avec notre koliko, accompagné d'une sauce
             tomate savoureuse, de legume frais et ou de viande savoureuse,ne manquez pas
             l'occasion de savourer ce plat emblématique
           </p>
-          <button class="btn">COMMANDEZ</button>
+          <div class="commander">
+            <button class="btn">COMMANDEZ</button>
+          </div>
         </div><div class="order__card">
           <img src="assets/jus-de-bissap-decouvrez.jpg" alt="order" />
           <h4>Jus Bissap</h4>
@@ -113,7 +123,9 @@
             ce jus est parfait pour étancher votre soif. Naturellement coloré et 
             revitalisant, il apporte une touche de fraîcheur à chaque gorgée.
           </p>
-          <button class="btn">COMMANDEZ</button>
+          <div class="commander">
+            <button class="btn">COMMANDEZ</button>
+          </div>
         </div>
         <div class="order__card">
           <img src="assets/order-3.png" alt="order" />
@@ -121,7 +133,9 @@
           <p>
             Offrez-vous une symphonie de saveurs fumées et savoureuses avec notre BBQ Bacon Burger, grillé et garni de bacon croustillant.
           </p>
-          <button class="btn">COMMANDEZ</button>
+          <div class="commander">
+            <button class="btn">COMMANDEZ</button>
+          </div>
         </div><div class="order__card">
           <img src="assets/attiekePoison.jpg" alt="order" />
           <h4>Attiéké poisson</h4>
@@ -130,7 +144,10 @@
             grillé, assaisonné à la perfection. Un plat qui vous transporte en Côte d’Ivoire, bouchée après 
             bouchée !
           </p>
-          <button class="btn">COMMANDEZ</button>
+          <div class="commander">
+            <button class="btn">COMMANDEZ</button>
+          </div>
+          
         </div>
       </div>
     </section>
@@ -138,7 +155,7 @@
     <section class="section__container event__container" id="event">
       <div class="event__content">
         <div class="event__image">
-          <img src="assets/event.png" alt="event" />
+          <img src="assets/002.png" alt="event" />
         </div>
         <div class="event__details">
           <h3>Discover</h3>
@@ -170,7 +187,7 @@
         </form>
       </div>
       <img
-        src="assets/reservation-bg-1.png"
+        src="assets/pizza.png"
         alt="reservation"
         class="reservation__bg-1"
       />
@@ -186,14 +203,14 @@
         <div class="footer__logo">
           
             <img
-              src="assets/logFaz.jpg"
-              alt="logo Faz Dynastie"
+              src="assets/sunset.jpeg"
+              alt="logo SunSet grill"
               class="nav__logo-dark"
             />
         </div>
         <div class="footer__content">
           <p>
-            Bienvenue chez FAZ DYNASTIE, où la passion pour la cuisine d'exception et
+            Bienvenue au SunSet Grill, où la passion pour la cuisine d'exception et
             l'hospitalité authentique se rencontrent. Notre histoire est celle d'un dévouement
             à créer une expérience culinaire parfaite, de l'approvisionnement des meilleurs
             ingrédients à la livraison d'un goût incomparable à chaque cuillère.
@@ -202,11 +219,11 @@
             <ul class="footer__links">
               <li>
                 <span><i class="ri-map-pin-2-fill"></i></span>
-                Kara, Zongo, 500089
+                Saint Louis, 
               </li>
               <li>
                 <span><i class="ri-phone-line"></i></span>
-                (+228) 79941219
+                (+221) 78 194 13 51
               </li>
             </ul>
             <div class="footer__socials">

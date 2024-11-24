@@ -41,6 +41,23 @@
   line-height: 1.75rem;
 }
 
+.commander{
+  
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+@keyframes none {
+  0%{
+    display: none;
+  }
+
+  100%{
+    display: flex;
+  }
+}
+
 .btn {
   padding: 1rem 1.5rem;
   outline: none;
@@ -75,17 +92,12 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-.header {
-  background-image: url("assets/header-bg.png");
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
+
 
 nav {
   position: fixed;
   width: 100%;
-  max-width: var(--max-width);
+  max-width: 2000px;
   margin-inline: auto;
   z-index: 9;
 }
@@ -104,16 +116,26 @@ nav {
 
 
 
+.logo{
+  display: flex;
+  align-items: center;
+  font-family: 'Great Vibes', cursive;
+  color: var(--white);
+}
+
 .nav__logo img {
   width: 50px;
   height: 50px;
   border-radius: 50%;
   object-fit:cover;
+  margin: 10px;
+
 }
 
 
 .nav__logo-dark {
   display: none;
+  margin-right: 10px;
 }
 
 .nav__menu__btn {
@@ -142,6 +164,8 @@ nav {
 
 .nav__links.open {
   transform: translateY(0);
+  height: 300px;
+  color: transparent;
 }
 
 .nav__links a {
@@ -208,8 +232,19 @@ nav {
   border-radius: 1rem;
 }
 
+.order__container .bordertop{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin:12px 0;
+}
+
+.order__container .bordertop img{
+  width: 30%;
+}
+
 .banner__card:nth-child(1) {
-  background-image: url("assets/banner-1.png");
+  background-image: url("assets/macaroni.jpg");
 }
 
 .banner__card:nth-child(2) {
@@ -217,7 +252,7 @@ nav {
 }
 
 .banner__card:nth-child(3) {
-  background-image: url("assets/banner-3.png");
+  background-image: url("assets/backImage.jpeg");
 }
 
 .banner__card p {
@@ -260,9 +295,13 @@ nav {
 }
 
 .order__card {
+  max-height: 650px;
   padding: 2rem 1rem;
   border-radius: 1rem;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   transition: 0.3s;
 }
 
@@ -285,6 +324,8 @@ nav {
 }
 
 .order__card p {
+  height: 250px;
+  overflow-y: scroll;
   margin-bottom: 2rem;
   font-weight: 500;
   color: var(--text-dark);
@@ -351,10 +392,28 @@ nav {
 }
 
 .footer {
-  background-image: url("assets/footer-bg.png");
+  background-image: url("assets/food.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
+  position: relative;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Couche sombre semi-transparente */
+  z-index: 1; /* Place cette couche au-dessus de l'image */
+}
+
+.footer div {
+  position: relative;
+  z-index: 2; /* Place le texte au-dessus de la couche sombre */
+  color: white;
 }
 
 .footer__logo img {
@@ -434,13 +493,20 @@ nav {
 @media (width > 768px) {
   nav {
     position: static;
-    padding: 2rem 1rem;
+    padding: 1rem 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
+    width: 100%;
+    background-color: rgb(0, 0, 0,.7);
+    position: fixed;
   }
 
+  .logo{
+    width: 300px;
+    font-size: 30px;
+  }
   .nav__header {
     padding: 0;
     background-color: transparent;
@@ -450,7 +516,10 @@ nav {
 
   .nav__logo-dark {
     display: flex;
+    margin-right: 10px;
   }
+
+  
 
   .nav__logo-white {
     display: none;
@@ -461,6 +530,7 @@ nav {
   }
 
   .nav__links {
+    color: transparent;
     position: static;
     padding: 0;
     flex-direction: row;
@@ -470,12 +540,28 @@ nav {
     z-index: 1;
   }
 
+  .nav__links li{
+    color: transparent;
+    transition: all .5s;
+  }
+
+
+
+  .nav__links li:hover{
+    color: var(--white);
+  }
+
   .nav__links a {
-    color: var(--primary-color);
+    color: var(--white);
+    font-size: 13px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+    transition: all .5s;
   }
 
   .nav__links a:hover {
-    color: var(--tertiary-color);
+    color: var(--white);
+    margin:0 12px ;
   }
 
   .header__container {
@@ -549,6 +635,7 @@ nav {
   }
 
   .footer__links li {
+    display: flex;
     justify-content: flex-end;
   }
 
@@ -560,5 +647,49 @@ nav {
 @media (width > 1024px) {
   .order__grid {
     gap: 2rem;
+  }
+}
+
+
+.slash{
+  height: 10px;
+  background-color: #ffffff;
+  width: 1px;
+}
+
+
+
+.header {
+  position: relative;
+  height: 90vh;
+  width: 100%;
+  overflow: hidden;
+  
+  text-align: center;
+}
+
+.header h1 {
+  z-index: 2; /* Place le texte au-dessus de l'image */
+}
+
+.header .bckg {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Gère le 'cover' de l'image */
+  animation: zoomEffect 6s ease-in-out forwards; /* Place l'image en arrière-plan */
+}
+
+@keyframes zoomEffect {
+  0% {
+    transform: scale(1.5); /* Zoom initial */
+    opacity: 0.8; /* Légère opacité pour un effet agréable */
+  }
+  100% {
+    transform: scale(1); /* Retour à la taille normale */
+    opacity: 1; /* Opacité complète */
   }
 }
