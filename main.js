@@ -41,3 +41,32 @@ ScrollReveal().reveal(".order__card", {
 ScrollReveal().reveal(".event__content", {
   duration: 1000,
 });
+
+
+////////////////////////////////////////////////////////////////////////////////
+// Fonction pour afficher le modal
+function showModal(id) {
+  document.getElementById(id).style.display = 'flex';
+}
+// Fonction pour fermer le modal
+function closeModal(id) {
+  document.getElementById(id).style.display = 'none';
+}
+
+// Ajout des écouteurs d'événements aux lignes de résultats
+// document.querySelectorAll('.resultRow').forEach(row => {
+//     row.addEventListener('click', showModal);
+// });
+
+// Écouteur d'événement pour le bouton de fermeture
+document.querySelector('.close-button').addEventListener('click', closeModal('modal'));
+document.querySelector('.close-button2').addEventListener('click', closeModal('laststep'));
+// const fn=document.getElementById('finalisation');
+// fn.addEventListener('click', showModal('laststep'));
+
+// Écouteur d'événement pour fermer le modal en cliquant en dehors
+window.addEventListener('click', function(event) {
+  if (event.target == document.getElementById('modal')) {
+      closeModal('modal');
+  }
+});

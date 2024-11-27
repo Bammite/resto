@@ -41,33 +41,6 @@
   line-height: 1.75rem;
 }
 
-.commander{
-  
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-
-@keyframes none {
-  0%{
-    display: none;
-  }
-
-  100%{
-    display: flex;
-  }
-}
-
-.btn {
-  padding: 1rem 1.5rem;
-  outline: none;
-  border: none;
-  font-size: 1rem;
-  color: var(--white);
-  background-color: var(--tertiary-color);
-  transition: 0.3s;
-  cursor: pointer;
-}
 
 .btn:hover {
   background-color: var(--primary-color);
@@ -692,4 +665,88 @@ nav {
     transform: scale(1); /* Retour à la taille normale */
     opacity: 1; /* Opacité complète */
   }
+}
+
+
+
+.modal,.modal2 {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+  justify-content: center;
+  align-items: center;
+}
+.modal-content,.modal-content2 {
+  background-color: #fefefe;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 300px;
+  text-align: center;
+  border-radius: 5px;
+}
+.close-button,.close-button2 {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close-button:hover,
+.close-button:focus,
+.close-button2:focus,.close-button2:hover {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+.colorBlack{
+  color: black;
+}
+
+.colorWt{
+  color: white;
+}
+
+
+.commander{
+  
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+@keyframes none {
+  0%{
+    display: none;
+  }
+
+  100%{
+    display: flex;
+  }
+}
+
+.btn {
+  padding: 1rem 1.5rem;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  color: var(--white);
+  background-color: var(--tertiary-color);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+
+
+.final{
+  background-image: url(assets/catalogue.svg);
+  height: 600px;
 }
