@@ -12,23 +12,45 @@
     <title>SunSet Grill</title>
   </head>
   <body>
-    <div id="modal" class="modal">
+
+    <div id="orderModal" class="modal hidden">
       <div class="modal-content">
-        <span class="close-button">&times;</span>
-        <p>Contact</p>
-        <div class="social-icons">
-            <a href="https://www.facebook.com" target="_blank" class="social-link">
-                <i class="fab fa-facebook-f"></i> 
-            </a>
-            <a href="https://www.instagram.com" target="_blank" class="social-link">
-                <i class="fab fa-instagram"></i> 
-            </a>
-            <a href="mailto:example@gmail.com" target="_blank" class="social-link">
-                <i class="fas fa-envelope"></i>
-            </a>
+        
+        <div class="comp">
+          <h3>Effectuer une commande</h3>
+          <span class="close-button">&times;</span>
         </div>
+        <form id="orderForm">
+          <div class="comp">
+            <label for="itemName">Nom du plat :</label>
+            <input type="text" id="itemName" name="itemName" required readonly />
+          </div>
+          <div class="comp">
+            <label for="quantity">Quantité :</label>
+            <input type="number" id="quantity" required name="quantity" min="1" value="1" />
+          </div>
+          <div class="comp">
+            <label for="numeroTel">Telephone:</label>
+            <input type="text" placeholder="Ex: +221 78 194 13 51">
+          </div>
+          <div class="comp">
+            <label for="paiement">Payer par: </label>
+            <select class="select" name="paiement" id="paie">
+              <option value="1">Wave</option>
+              <option value="2">Orange Money</option>
+              <option value="3">Free Money</option>
+            </select>
+          </div>
+          <div class="comp">
+            <label for="comments">Commentaires :</label>
+            <textarea id="comments" name="comments" placeholder="Ex : sans oignons..."></textarea>
+          </div>
+          <button type="submit" class="btn">Valider la commande</button>
+        </form>
       </div>
     </div>
+
+    
 
 
 
@@ -179,7 +201,7 @@
     <section class="section__container event__container" id="event">
       <div class="event__content">
         <div class="event__image">
-          <img src="assets/002.png" alt="event" />
+          <img src="assets/resraurant.jpg" alt="event" />
         </div>
         <div class="event__details">
           <h3>Discover</h3>
@@ -207,7 +229,7 @@
           <input type="date" placeholder="DATE" />
           <input type="time" placeholder="TIME" />
           <input type="text" placeholder="Decrire vos besoins" />
-          <button class="btn" type="submit">FIND TABLE</button>
+          <button class="btn" type="submit">ENVOYER</button>
         </form>
       </div>
       <img

@@ -669,41 +669,7 @@ nav {
 
 
 
-.modal,.modal2 {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0,0.4);
-  justify-content: center;
-  align-items: center;
-}
-.modal-content,.modal-content2 {
-  background-color: #fefefe;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 300px;
-  text-align: center;
-  border-radius: 5px;
-}
-.close-button,.close-button2 {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-.close-button:hover,
-.close-button:focus,
-.close-button2:focus,.close-button2:hover {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
+
 
 
 
@@ -749,4 +715,88 @@ nav {
 .final{
   background-image: url(assets/catalogue.svg);
   height: 600px;
+}
+
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  width: 90%;
+  max-width: 450px;
+  
+}
+
+.modal-content {
+  position: relative;
+}
+
+.hidden {
+  display: none;
+}
+
+.close-button {
+  position: absolute;
+  right: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.modal input,
+.modal textarea,
+.modal select {
+  margin: 10px 0;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 65%;
+  max-width: 250px;
+}
+
+
+
+
+
+.modal .comp{
+  width: 100%;
+  display: flex ;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal button {
+  margin: 10px 0;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  background-color: #ff6600;
+  color: white;
+  cursor: pointer;
+}
+
+
+@media (width < 568px){
+  .modal .comp{
+    width: 100%;
+    display: flex ;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .modal input,
+  .modal textarea {
+    margin: 10px 0;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 50%;
+    max-width: 200px;
+  }
 }

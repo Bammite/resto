@@ -44,29 +44,39 @@ ScrollReveal().reveal(".event__content", {
 
 
 ////////////////////////////////////////////////////////////////////////////////
-// Fonction pour afficher le modal
-function showModal(id) {
-  document.getElementById(id).style.display = 'flex';
-}
-// Fonction pour fermer le modal
-function closeModal(id) {
-  document.getElementById(id).style.display = 'none';
-}
+// Variables globales
+const modal = document.getElementById("orderModal");
+const closeButton = document.querySelector(".close-button");
+const orderForm = document.getElementById("orderForm");
+const itemNameInput = document.getElementById("itemName");
+const commanderButtons = document.querySelectorAll(".commander .btn");
 
-// Ajout des écouteurs d'événements aux lignes de résultats
-// document.querySelectorAll('.resultRow').forEach(row => {
-//     row.addEventListener('click', showModal);
-// });
+// Ouvrir le modal au clic sur un bouton Commander
+commanderButtons.forEach(button => {
+  button.addEventListener("click", (event) => {
+    const card = event.target.closest(".order__card");
+    const dishName = card.querySelector("h4").innerText;
+    itemNameInput.value = dishName; // Remplir le champ avec le nom du plat
+    modal.classList.remove("hidden"); // Afficher le modal
+  });
+});
 
-// Écouteur d'événement pour le bouton de fermeture
-document.querySelector('.close-button').addEventListener('click', closeModal('modal'));
-document.querySelector('.close-button2').addEventListener('click', closeModal('laststep'));
-// const fn=document.getElementById('finalisation');
-// fn.addEventListener('click', showModal('laststep'));
+// Fermer le modal au clic sur le bouton de fermeture
+closeButton.addEventListener("click", () => {
+  modal.classList.add("hidden");
+});
 
-// Écouteur d'événement pour fermer le modal en cliquant en dehors
-window.addEventListener('click', function(event) {
-  if (event.target == document.getElementById('modal')) {
-      closeModal('modal');
+// Fermer le modal en cliquant en dehors de la fenêtre
+window.addEventListener("click", (event) => {
+  if (event.target === modal) {
+    modal.classList.add("hidden");
   }
+});
+
+// Gérer la soumission du formulaire
+orderForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const formData = new FormData(orderForm);
+  alert(`Commande validée pour ${formData.get("itemName")} avec une quantité de ${formData.get("quantity")}.`);
+  modal.classList.add("hidden");
 });
