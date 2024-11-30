@@ -39,14 +39,20 @@
               <option value="1">Wave</option>
               <option value="2">Orange Money</option>
               <option value="3">Free Money</option>
+              <option value="4">Payer a la livraison</option>
             </select>
           </div>
           <div class="comp">
             <label for="comments">Commentaires :</label>
             <textarea id="comments" name="comments" placeholder="Ex : sans oignons..."></textarea>
           </div>
+          <p id="totalPrice">Prix total : 0 FCFA</p>
           <button type="submit" class="btn">Valider la commande</button>
         </form>
+        <details>
+          <summary>Comment foncionne la Commande et la livraison ?</summary>
+          <p>Apres avoir validé la commande sunset grill vous contacteras pour relever votre position geographique et vous l'aporter en cas de retard de plus de 12h sur le delai de livraison prevu, sunset grill s'engage a vous rembourser votre  argent suivie d'un dedomagement. Vous pouvez egalement <a href="tel:+221781941351">effectuer directement votre commande</a> en nous contactant.</p>
+        </details>
       </div>
     </div>
 
@@ -132,7 +138,7 @@
             Un vrai régal pour les amateurs de sensations fortes !
           </p>
           <div class="commander">
-            <button class="btn">COMMANDEZ</button>
+            <button class="btn" data-price="2500">COMMANDEZ</button>
           </div>
         </div>
         <div class="order__card">
@@ -143,7 +149,7 @@
             savoureuses et accompagné de légumes frais pour un goût intense et une texture irrésistible.
           </p>
           <div class="commander">
-            <button class="btn">COMMANDEZ</button>
+            <button class="btn" data-price="2500">COMMANDEZ</button>
           </div>
         </div>
         <div class="order__card">
@@ -153,7 +159,7 @@
             Une pizza généreusement garnie de fromage fondant, de sauce tomate maison et d'une sélection de toppings de votre choix. Chaque bouchée est un délice, parfaite pour satisfaire toutes les envies, des plus simples aux plus audacieuses.
           </p>
           <div class="commander">
-            <button class="btn">COMMANDEZ</button>
+            <button class="btn" data-price="2500">COMMANDEZ</button>
           </div>
         </div><div class="order__card">
           <img src="assets/jus-de-bissap-decouvrez.jpg" alt="order" />
@@ -165,7 +171,7 @@
             revitalisant, il apporte une touche de fraîcheur à chaque gorgée.
           </p>
           <div class="commander">
-            <button class="btn">COMMANDEZ</button>
+            <button class="btn" data-price="2500">COMMANDEZ</button>
           </div>
         </div>
         <div class="order__card">
@@ -175,7 +181,7 @@
             Offrez-vous une symphonie de saveurs fumées et savoureuses avec notre BBQ Bacon Burger, grillé et garni de bacon croustillant.
           </p>
           <div class="commander">
-            <button class="btn">COMMANDEZ</button>
+            <button class="btn" data-price="2500">COMMANDEZ</button>
           </div>
         </div>
         <div class="order__card">
@@ -185,7 +191,7 @@
             Des tortillas chaudes garnies de viande savoureuse, de légumes croquants et d'une touche de salsa, pour une explosion de saveurs simples et délicieuses. Un classique qui fait toujours plaisir !
           </p>
           <div class="commander">
-            <button class="btn">COMMANDEZ</button>
+            <button class="btn" data-price="2500">COMMANDEZ</button>
           </div>
           
         </div>
@@ -287,6 +293,6 @@
     </footer>
 
     <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="main.js"></script>
+    <script src="main.js?v=1.1"></script>
   </body>
 </html>

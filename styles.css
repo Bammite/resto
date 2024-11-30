@@ -800,3 +800,26 @@ nav {
     max-width: 200px;
   }
 }
+
+.modal details{
+  width: 100%;
+  color: #614fff;
+  
+  text-align: justify;
+  font-size: 12px;
+}
+
+.modal details summary{
+  cursor: pointer;
+  margin: 10px 0;
+  width: 100%;
+  text-align: center;
+}
+
+.modal details p{
+  color: #212529;
+}
+
+.modal details p a{
+  color: blue;
+}
