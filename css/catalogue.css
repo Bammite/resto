@@ -157,3 +157,149 @@ main {
         margin-bottom: 10px;
     }
 }
+
+
+
+
+
+.commander{
+  
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  @keyframes none {
+    0%{
+      display: none;
+    }
+  
+    100%{
+      display: flex;
+    }
+  }
+  
+  .btn {
+    padding: 1rem 1.5rem;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    color: var(--white);
+    background-color: var(--tertiary-color);
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  
+  
+  
+  .final{
+    background-image: url(assets/catalogue.svg);
+    height: 600px;
+  }
+  
+  
+  .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    width: 90%;
+    max-width: 450px;
+    
+  }
+  
+  .modal-content {
+    position: relative;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .close-button {
+    position: absolute;
+    right: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .modal input,
+  .modal textarea,
+  .modal select {
+    margin: 10px 0;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 65%;
+    max-width: 250px;
+  }
+  
+  
+  
+  
+  
+  .modal .comp{
+    width: 100%;
+    display: flex ;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .modal button {
+    margin: 10px 0;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    background-color: #ff6600;
+    color: white;
+    cursor: pointer;
+  }
+  
+  
+  @media (width < 568px){
+    .modal .comp{
+      width: 100%;
+      display: flex ;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .modal input,
+    .modal textarea {
+      margin: 10px 0;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      width: 50%;
+      max-width: 200px;
+    }
+  }
+  
+  .modal details{
+    width: 100%;
+    color: #614fff;
+    
+    text-align: justify;
+    font-size: 12px;
+  }
+  
+  .modal details summary{
+    cursor: pointer;
+    margin: 10px 0;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .modal details p{
+    color: #212529;
+  }
+  
+  .modal details p a{
+    color: blue;
+  }

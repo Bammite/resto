@@ -4,124 +4,72 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Catalogue Restaurant</title>
-        <link rel="stylesheet" href="catalogue.css">
+        <link rel="stylesheet" href="/css/catalogue.css">
     
 </head>
 <body>
-    <div class="bacgrd">
+
+    <div id="orderModal" class="modal hidden">
+        <div class="modal-content">
+          <div class="comp">
+            <h3>Effectuer une commande</h3>
+            <span class="close-button">&times;</span>
+          </div>
+          <form id="orderForm" enctype="multipart/form-data">
+            <div class="comp">
+              <label for="itemName">Nom du plat :</label>
+              <input type="text" id="itemName" name="itemName" required readonly />
+            </div>
+            <div class="comp">
+              <label for="quantity">Quantité :</label>
+              <input type="number" id="quantity" required name="quantity" min="1" value="1" />
+            </div>
+            <div class="comp">
+              <label for="numeroTel">Telephone :</label>
+              <input type="text" placeholder="Ex: +221 78 194 13 51" />
+            </div>
+            <div class="comp">
+              <label for="paiement">Payer par :</label>
+              <select class="select" name="paiement" id="paie">
+                <option value="1">Wave</option>
+                <option value="2">Orange Money</option>
+                <option value="3">Free Money</option>
+                <option value="4">Payer à la livraison</option>
+              </select>
+            </div>
+            <div class="comp">
+              <label for="comments">Commentaires :</label>
+              <textarea id="comments" name="comments" placeholder="Ex : sans oignons..."></textarea>
+            </div>
+            <p id="totalPrice">Prix total : 0 FCFA</p>
+            <button type="submit" class="btn">Valider la commande</button>
+          </form>
+          <details>
+            <summary>Comment fonctionne la commande et la livraison ?</summary>
+            <p>
+              Après avoir validé la commande, le restaurant vous contactera pour relever votre position géographique et
+              vous livrer. En cas de retard de plus de 12h sur le délai de livraison prévu, le restaurant s'engage à
+              rembourser votre argent suivi d'un dédommagement. Vous pouvez également <a href="tel:+221781941351">effectuer
+              directement votre commande</a> en nous contactant.
+            </p>
+          </details>
+        </div>
+      </div>
+    <div class="bacgrd"> 
 
         <img src="./assets/téléchargement.jpeg" alt="">
     </div>
     <div class="filtre"></div>
     <header class="header">
        <a href="./index.html"><button class="back-button"><img src="./assets/back.svg" alt=""></button></a> 
-        <button class="search-button">
+        <button class="search-button" id="searchButton">
             <img src="https://cdn-icons-png.flaticon.com/512/622/622669.png" alt="Search" class="search-icon">
         </button>
     </header>
-    
-    <main>
-
-         <!-- PATISSERIE Category -->
-         <section class="category">
-            <h2>PATISSERIE</h2>
-            <div class="items">
-                <article class="item">
-                    <img src="./assets/croissant.jpeg" alt="Pâtisserie">
-                    <h3>Croissant</h3>
-                    <p>Un classique de la pâtisserie française...</p>
-                    <button class="order-button">Commander</button>
-                </article>
-                <article class="item">
-                    <img src="./assets/eclairs-au-chocolat-fond-blanc-generes-par-ia_985692-317.avif" alt="Pâtisserie">
-                    <h3>Éclair au Chocolat</h3>
-                    <p>Délicieux et gourmand...</p>
-                    <button class="order-button">Commander</button>
-                </article>
-                <article class="item">                    
-                    <img src="./assets/pancakes-baies-du-sirop-erable-isoles-fond-blanc_170984-19923.jpeg" alt="Pâtisserie">
-                    <h3>Pancake</h3>
-                    <p>Délicieux et gourmand...</p>
-                    <button class="order-button">Commander</button>
-                </article>
-                <article class="item">
-                    <img src="./assets/gateau.jpg" alt="Pâtisserie">
-                    <h3>Gateau Personnalisable</h3>
-                    <p>Délicieux et gourmand...</p>
-                    <button class="order-button">Commander</button>
-                </article>
-                <article class="item">
-                    <img src="./assets/crepes-francaises-isolees-fond-blanc-uni_146508-7012.avif" alt="Pâtisserie">
-                    <h3>Crepes</h3>
-                    <p>Délicieux et gourmand...</p>
-                    <button class="order-button">Commander</button>
-                </article>
-            </div>
-        </section>
-
-
-        <!-- GRIADE Category -->
-        <section class="category">
-            <h2>GRIADE</h2>
-            <div class="items">
-                <article class="item">
-                    <img src="./assets/brochette-viande-legumes-isole-fond-blanc-ai-generative_123827-24960.jpeg" alt="Plat">
-                    <h3>brochette-Bœuf</h3>
-                    <p>Embarquez pour un voyage gustatif au cœur du Mexique...</p>
-                    <div class="commander">
-                        <button class="order-button">COMMANDEZ</button>
-                    </div>
-                </article>
-                <article class="item">
-                    <img src="./assets/order-1.png" alt="Plat">
-                    <h3>Burger Américain</h3>
-                    <p>Embarquez pour un voyage gustatif au cœur du Mexique...</p>
-                    <div class="commander">
-                        <button class="order-button">COMMANDEZ</button>
-                    </div>
-                </article>
-                <article class="item">
-                    <img src="./assets/poulet_Braise.jpeg" alt="Plat">
-                    <h3>Poulet Braisé</h3>
-                    <p>Embarquez pour un voyage gustatif au cœur du Mexique...</p>
-                    <div class="commander">
-                        <button class="order-button">COMMANDEZ</button>
-                    </div>
-                </article>
-                <article class="item">
-                    <img src="./assets/taco-mexicain-isole-fond-blanc_198067-100.jpeg" alt="Plat">
-                    <h3>Tacos Mexicains</h3>
-                    <p>Embarquez pour un voyage gustatif au cœur du Mexique...</p>
-                    <div class="commander">
-                        <button class="order-button">COMMANDEZ</button>
-                    </div>
-                </article>
-                
-            </div>
-        </section>
-
-       
-
-        <section class="category">
-            <h2>BAR</h2>
-            <div class="items">
-                <article class="item">
-                    <img src="https://via.placeholder.com/200" alt="Pâtisserie">
-                    <h3>Croissant</h3>
-                    <p>Un classique de la pâtisserie française...</p>
-                    <button class="order-button">Commander</button>
-                </article>
-                <article class="item">
-                    <img src="https://via.placeholder.com/200" alt="Pâtisserie">
-                    <h3>Éclair au Chocolat</h3>
-                    <p>Délicieux et gourmand...</p>
-                    <button class="order-button">Commander</button>
-                </article>
-                
-            </div>
-        </section>
-    </main>
-
-    <script src="script.js"></script>
+    <div id="catalogue">
+        <main></main>
+    </div>
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

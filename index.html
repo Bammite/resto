@@ -7,9 +7,9 @@
       href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
       rel="stylesheet"
     />
-    <link rel="shortcut icon" type="x-icon" href="./assets/sunset.jpeg">
-    <link rel="stylesheet" href="styles.css?v=1.2"/>
-    <title>SunSet Grill</title>
+    <link rel="shortcut icon" type="x-icon" href="./assets/logFaz.jpg">
+    <link rel="stylesheet" href="./css/styles.css?v=1.2"/>
+    <title>Restaurant</title>
   </head>
   <body>
 
@@ -20,7 +20,7 @@
           <h3>Effectuer une commande</h3>
           <span class="close-button">&times;</span>
         </div>
-        <form id="orderForm">
+        <form id="orderForm" enctype="multipart/form-data">
           <div class="comp">
             <label for="itemName">Nom du plat :</label>
             <input type="text" id="itemName" name="itemName" required readonly />
@@ -33,6 +33,7 @@
             <label for="numeroTel">Telephone:</label>
             <input type="text" placeholder="Ex: +221 78 194 13 51">
           </div>
+          
           <div class="comp">
             <label for="paiement">Payer par: </label>
             <select class="select" name="paiement" id="paie">
@@ -51,14 +52,10 @@
         </form>
         <details>
           <summary>Comment foncionne la Commande et la livraison ?</summary>
-          <p>Apres avoir validé la commande sunset grill vous contacteras pour relever votre position geographique et vous l'aporter en cas de retard de plus de 12h sur le delai de livraison prevu, sunset grill s'engage a vous rembourser votre  argent suivie d'un dedomagement. Vous pouvez egalement <a href="tel:+221781941351">effectuer directement votre commande</a> en nous contactant.</p>
+          <p>Apres avoir validé la commande Restaurant vous contacteras pour relever votre position geographique et vous l'aporter en cas de retard de plus de 12h sur le delai de livraison prevu, Restaurant s'engage a vous rembourser votre  argent suivie d'un dedomagement. Vous pouvez egalement <a href="tel:+221781941351">effectuer directement votre commande</a> en nous contactant.</p>
         </details>
       </div>
     </div>
-
-    
-
-
 
 
     <header class="header" id="acceuil">
@@ -68,15 +65,15 @@
           <div class="nav__logo">
             <a href="#" class="logo">
               <img
-                src="assets/sunset.jpeg"
-                alt="logo Faz Dynastie"
+                src="assets/logFaz.jpg"
+                alt="logo saharaoui"
                 class="nav__logo-dark"
               />
               <img
-                src="assets/sunset.jpeg"
-                alt="logo"
+                src="assets/logFaz.jpg"
+                alt="logo saharaoui"
                 class="nav__logo-white"
-              />SunSet Grill
+              />Restaurant
             </a>
           </div>
           <div class="nav__menu__btn" id="menu-btn">
@@ -109,7 +106,7 @@
       </div>
       <div class="banner__card">
         <p>LE PLUS POPULAIRE</p>
-        <h4>BURGER <br />AU POULET</h4>
+        <h4>BURGER <br/>AU POULET</h4>
       </div>
       <div class="banner__card">
         <p>POUR UNE SOIREÉ</p>
@@ -125,81 +122,11 @@
       <p class="section__description">
         Que vous ayez envie de saveurs classiques ou de combinaisons audacieuses, 
         c'est ici que votre voyage culinaire commence. Satisfaisez vos envies et 
-        savourez chaque bouchée en créant votre expérience de culinaire personnalisée avec SunSet Grill.
+        savourez chaque bouchée en créant votre expérience de culinaire personnalisée avec Restaurant.
       </p>
-      <div class="order__grid">
-        <div class="order__card">
-          <img src="assets/taco-mexicain-isole-fond-blanc_198067-100.jpeg" alt="order" />
-          <h4>Tacos Mexicains</h4>
-          <p>
-            Embarquez pour un voyage gustatif au cœur du Mexique
-            avec nos tacos garnis de viande épicée, d'avocat crémeux,
-            de coriandre fraîche et d'une sauce piquante maison. 
-            Un vrai régal pour les amateurs de sensations fortes !
-          </p>
-          <div class="commander">
-            <button class="btn" data-price="2500">COMMANDEZ</button>
-          </div>
-        </div>
-        <div class="order__card">
-          <img src="assets/brochette-viande-legumes-isole-fond-blanc-ai-generative_123827-24960.jpeg" alt="order" />
-          <h4>Brochettes de Poulet</h4>
-          <p>
-            Succombez à la tendresse du poulet grillé à la perfection, assaisonné d'épices 
-            savoureuses et accompagné de légumes frais pour un goût intense et une texture irrésistible.
-          </p>
-          <div class="commander">
-            <button class="btn" data-price="2500">COMMANDEZ</button>
-          </div>
-        </div>
-        <div class="order__card">
-          <img src="assets/pizza.png" alt="order" />
-          <h4>pizza</h4>
-          <p>
-            Une pizza généreusement garnie de fromage fondant, de sauce tomate maison et d'une sélection de toppings de votre choix. Chaque bouchée est un délice, parfaite pour satisfaire toutes les envies, des plus simples aux plus audacieuses.
-          </p>
-          <div class="commander">
-            <button class="btn" data-price="2500">COMMANDEZ</button>
-          </div>
-        </div><div class="order__card">
-          <img src="assets/jus-de-bissap-decouvrez.jpg" alt="order" />
-          <h4>Jus Bissap</h4>
-          <p>
-            Rafraîchissez-vous avec notre jus bissap. 
-            Avec son goût légèrement acidulé et ses notes florales, 
-            ce jus est parfait pour étancher votre soif. Naturellement coloré et 
-            revitalisant, il apporte une touche de fraîcheur à chaque gorgée.
-          </p>
-          <div class="commander">
-            <button class="btn" data-price="2500">COMMANDEZ</button>
-          </div>
-        </div>
-        <div class="order__card">
-          <img src="assets/order-3.png" alt="order" />
-          <h4>Burger au bacon et au barbecue</h4>
-          <p>
-            Offrez-vous une symphonie de saveurs fumées et savoureuses avec notre BBQ Bacon Burger, grillé et garni de bacon croustillant.
-          </p>
-          <div class="commander">
-            <button class="btn" data-price="2500">COMMANDEZ</button>
-          </div>
-        </div>
-        <div class="order__card">
-          <img src="assets/tacos-normal.jpg" alt="order" />
-          <h4>Tacos Bassique</h4>
-          <p>
-            Des tortillas chaudes garnies de viande savoureuse, de légumes croquants et d'une touche de salsa, pour une explosion de saveurs simples et délicieuses. Un classique qui fait toujours plaisir !
-          </p>
-          <div class="commander">
-            <button class="btn" data-price="2500">COMMANDEZ</button>
-          </div>
-          
-        </div>
-        <a href="./cataogue.html">
-          <div class="order__card final">
-          
-        </div>
-        </a>
+      <div class="order__grid" id="orderGrid">
+        
+        
         
       </div>
     </section>
@@ -228,12 +155,12 @@
     <section class="reservation" id="contact">
       <div class="section__container reservation__container">
         <h3>CONTACT</h3>
-        <h2 class="section__header">PARLONS DE VOS BESOINS</h2>
+        <h2 class="section__header">RESERVER UNE TABLE</h2>
         <form action="/">
-          <input type="text" placeholder="NAME" />
-          <input type="email" placeholder="EMAIL" />
-          <input type="date" placeholder="DATE" />
-          <input type="time" placeholder="TIME" />
+          <input type="text" placeholder="NAME"/>
+          <input type="email" placeholder="TEL"/>
+          <input type="date" placeholder="DATE"/>
+          <input type="time" placeholder="TIME"/>
           <input type="text" placeholder="Decrire vos besoins" />
           <button class="btn" type="submit">ENVOYER</button>
         </form>
@@ -255,14 +182,14 @@
         <div class="footer__logo">
           
             <img
-              src="assets/sunset.jpeg"
-              alt="logo SunSet grill"
+              src="assets/logFaz.jpg"
+              alt="logo Restaurant"
               class="nav__logo-dark"
             />
         </div>
         <div class="footer__content">
           <p>
-            Bienvenue au SunSet Grill, où la passion pour la cuisine d'exception et
+            Bienvenue au Restaurant, où la passion pour la cuisine d'exception et
             l'hospitalité authentique se rencontrent. Notre histoire est celle d'un dévouement
             à créer une expérience culinaire parfaite, de l'approvisionnement des meilleurs
             ingrédients à la livraison d'un goût incomparable à chaque cuillère.
@@ -292,7 +219,8 @@
       </div>
     </footer>
 
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="main.js?v=1.1"></script>
+    <script src="js/data.js"></script>
+    <script src="./js/scrolreveal.js"></script>
+    <script src="js/main.js?v=1.1"></script>
   </body>
 </html>
