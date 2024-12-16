@@ -79,17 +79,48 @@ function updateTotalPrice() {
   totalPriceElement.innerText = `Prix total : ${totalPrice.toLocaleString()} FCFA`;
 }
 
+
 // Gérer la soumission du formulaire
-orderForm.addEventListener("submit", (event) => {
+
+
+
+document.getElementById("orderForm").addEventListener("submit", async function (event) {
   event.preventDefault();
-  const formData = new FormData(orderForm);
-  alert(
-    `Commande validée pour ${formData.get("itemName")} avec une quantité de ${formData.get("quantity")}. Prix total : ${
-      unitPrice * formData.get("quantity")
-    } FCFA.`
-  );
-  modal.classList.add("hidden");
+
+  const form = document.getElementById("orderForm");
+  const formData = new FormData(form);
+
+  showConfirmationModal();
+
+  // try {
+  //     const response = await fetch(form.action, {
+  //         method: "POST",
+  //         body: formData
+  //     });
+
+  //     if (response.ok) {
+  //         console.log("Formulaire envoyé avec succès !");
+  //         showConfirmationModal(); // Afficher le modal de confirmation
+  //     } else {
+  //         throw new Error("Erreur lors de l'envoi du formulaire.");
+  //     }
+  // } catch (error) {
+  //     console.error("Erreur :", error);
+  //     alert("Une erreur est survenue. Veuillez réessayer.");
+  // }
 });
+
+
+
+function showConfirmationModal() {
+  const modal = document.getElementById("confirmationModal");
+  modal.style.display = "flex"; // Affiche le modal (flex pour centrer)
+
+  // Masque le modal après 3 secondes
+  setTimeout(() => {
+      modal.style.display = "none";
+  }, 5000);
+}
 
 // Initialiser l'application
 generateDishCards();
