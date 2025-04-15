@@ -15,7 +15,7 @@ const dishes = [
       name: "Tacos Mexicains",
       description: "Embarquez pour un voyage gustatif au cœur du Mexique avec nos tacos garnis de viande épicée.",
       image: "./assets/taco-mexicain-isole-fond-blanc_198067-100.jpeg",
-      price: 2500,
+      price: 33300,
     },
     {
       name: "Brochettes de Poulet",
